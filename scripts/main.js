@@ -33,3 +33,5 @@ let movieData = {
       cast: ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
     },
   };
+
+  let display = 
