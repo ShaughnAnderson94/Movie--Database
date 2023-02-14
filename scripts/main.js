@@ -1,4 +1,4 @@
-let movieData = {
+let movieData = { 
     "The Darjeeling Limited": {
       plot: "A year after their father's funeral, three brothers travel across India by train in an attempt to bond with each other.",
       cast: ["Jason Schwartzman", "Owen Wilson", "Adrien Brody"],
@@ -34,4 +34,6 @@ let movieData = {
     },
   };
 
-  let display = 
+  const displayPlot = document.querySelector("#displayPlot");
+  displayPlot.innerHTML =  movieData["The Grand Budapest Hotel"].plot;
+
