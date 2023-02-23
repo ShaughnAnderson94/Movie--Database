@@ -34,6 +34,67 @@ let movieData = {
     },
   };
 
-  const displayPlot = document.querySelector("#displayPlot");
-  displayPlot.innerHTML =  movieData["The Grand Budapest Hotel"].plot;
+
+document.querySelector("#searchButton").onclick = function getInput() {
+  document.querySelectorAll(".SearchResults").forEach(a=>a.style.display = "block");
+  document.querySelectorAll(".AddFilm ").forEach(a=>a.style.display = "none");
+    const searchBox= document.querySelector("#movie-search");
+    const searchString = String(searchBox.value);
+    const selectedFilm =searchString;
+   
+  
+
+
+
+  function displayDisplayFilm(filmSelection) {
+    let titleDisplay = document.querySelector("h1");
+    titleDisplay.innerHTML = filmSelection;
+function displayFilm(displayLocation,displayData) {
+let display= document.querySelector(displayLocation);
+   display.innerHTML = displayData;
+ 
+}
+
+displayFilm("#displayPlot",movieData[filmSelection].plot);
+displayFilm("#displayCast",movieData[filmSelection].cast);
+displayFilm("#displayRuntime",movieData[filmSelection].runtime);
+displayFilm("#displayRating",movieData[filmSelection].rating);
+displayFilm("#displayYear",movieData[filmSelection].year);
+  }
+displayDisplayFilm(selectedFilm);
+
+}
+document.querySelector("#openAdd").onclick = function openAdd() {
+  document.querySelectorAll(".AddFilm ").forEach(a=>a.style.display = "block");
+  document.querySelectorAll(".SearchResults").forEach(a=>a.style.display = "none");
+}
+
+
+document.querySelector("#submitButton").onclick = function getNew() {
+  const SubmitTitleBox= document.querySelector("#SFilmTitle");
+    const submitTitleString = String(SubmitTitleBox.value);
+    const SubmitPlotBox= document.querySelector("#SFilmPlot");
+    const submitPlotString = String(SubmitPlotBox.value);
+    const SubmitCastBox= document.querySelector("#SFilmCast");
+    const submitCastString = String(SubmitCastBox.value);
+    const SubmitTimeBox= document.querySelector("#SFilmRuntime");
+    const SubmitRatingBox= document.querySelector("#SFilmRating");
+    const SubmitYearBox= document.querySelector("#SFilmRelease");
+    
+movieData[submitTitleString] = {
+  rating:SubmitRatingBox.value ,
+  runtime:SubmitTimeBox.value ,
+  year:SubmitYearBox.value ,
+  plot: submitPlotString ,
+  cast:submitCastString };
+  document.querySelectorAll(".AddFilm ").forEach(a=>a.style.display = "none");
+}
+
+/*const movieArray = Object.entries(movieData)
+movieArray.forEach(movie => {
+const idPrefix = "#display";
+const idsuffix = 1
+console.log(movie)
+
+}) */
 

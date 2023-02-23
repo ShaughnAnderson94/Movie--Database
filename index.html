@@ -10,17 +10,37 @@
     rel="stylesheet" />
 </head>
 <body>
- <h1 id="Film title">Film Title</h1> 
- <p>Plot:</p>
- <p id="displayPlot"></p>
- <p> Cast:</p>
- <p id="displayCast"></p>
- <p>Runtime:</p>
- <p id="displayRuntime"></p>
- <p>Rating:</p>
- <p id="displayRating"></p>
- <p>Release Year:</p>
- <p id="displayYear"></p>
+    <label for="movie-search">Seach the database </label>
+    <input type="search" id="movie-search" name="q" placeholder="film title" spellcheck="true" >
+    <button id="searchButton">Search</button>
+    
+    <label for="add-movie">Add Film</label>
+    <button id="openAdd">Add</button>
+
+ <h1 class="SearchResults" id="filmTitle">Film Title</h1> 
+ <p class="SearchResults">Plot:</p>
+ <p class="SearchResults" id="displayPlot"></p>
+ <p class="SearchResults"> Cast:</p>
+ <p class="SearchResults" id="displayCast"></p>
+ <p class="SearchResults">Runtime:</p>
+ <p class="SearchResults" id="displayRuntime"></p>
+ <p class="SearchResults">Rating:</p>
+ <p class="SearchResults" id="displayRating"></p>
+ <p class="SearchResults" >Release Year:</p>
+ <p class="SearchResults" id="displayYear"></p>
+ <label for="Film-Title" class="AddFilm">Film Title</label>
+ <input type="filmInfo" class="AddFilm" id="SFilmTitle" name="q" placeholder="film title" spellcheck="true" ><br>
+ <label for="Film-Plot" class="AddFilm">Film Plot</label>
+ <input type="filmInfo" class="AddFilm" id="SFilmPlot" name="q" placeholder="film plot" spellcheck="true" ><br>
+ <label for="Film-Cast" class="AddFilm">Film Cast</label>
+ <input type="filmInfo" class="AddFilm" id="SFilmCast" name="q" placeholder="film cast" spellcheck="true" ><br>
+ <label for="Film-Runtime" class="AddFilm">Film Runtime</label>
+ <input type="filmInfo" class="AddFilm" id="SFilmRuntime" name="q" placeholder="film runtime" spellcheck="true" ><br>
+ <label for="Film-Rating" class="AddFilm">Film Rating</label>
+ <input type="filmInfo" class="AddFilm" id="SFilmRating" name="q" placeholder="film rating" spellcheck="true" ><br>
+ <label for="Film-Release" class="AddFilm">Film Release Year</label>
+ <input type="filmInfo" class="AddFilm" id="SFilmRelease" name="q" placeholder="film release year" spellcheck="true" ><br>
+ <button class="AddFilm" id="submitButton">Submit</button>
     <script src="scripts/main.js"></script>
 </body>
 </html>
